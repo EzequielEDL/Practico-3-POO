@@ -48,5 +48,4 @@ class Libro:
             pages = pages + self.__listCapitulo[i].getCantidadPaginas()
         
         return pages
-
     

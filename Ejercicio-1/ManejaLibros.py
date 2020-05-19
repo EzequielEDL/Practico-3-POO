@@ -32,15 +32,15 @@ class ManejaLibros:
 
         for i in range(self.__listLibro[id].getCantidadCapitulos()) :
             print(' {}'.format(self.__listLibro[id].getCapituloTitulo(i)))
-
+    
     def showAutor(self, word):
         for i in range(len(self.__listLibro)) :
-            if self.__listLibro[i].getTitulo() == word :
-                print(self.__listLibro[i].getAutor())
-            
+            if word in self.__listLibro[i].getTitulo().lower() :
+                print('\n Libro: {}\n Autor: {}'.format(self.__listLibro[i].getTitulo(), self.__listLibro[i].getAutor()))
+
             else :
                 for j in range(self.__listLibro[i].getCantidadCapitulos()) :
-                    if self.__listLibro[i].getCapituloTitulo(j) == word :
-                        print(self.__listLibro[i].getAutor())
+                    if word in self.__listLibro[i].getCapituloTitulo(j).lower() :
+                        print('\n Capitulo: {}\n Autor: {}'.format(self.__listLibro[i].getCapituloTitulo(j), self.__listLibro[i].getAutor()))
             
         

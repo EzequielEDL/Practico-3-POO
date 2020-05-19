@@ -19,7 +19,7 @@ def option1(manejador):
     input('\n\n<< press any key to continue >>')
 
 def option2(manejador):
-    word = input(' Ingresar titulo: \n')
+    word = input(' Ingresar una palabra: \n')
     manejador.showAutor(word)
     
     input('\n\n<< press any key to continue >>')
