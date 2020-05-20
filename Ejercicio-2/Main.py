@@ -102,15 +102,14 @@ if __name__ == "__main__":
         print('\n  ' + key)
         if key == 'flecha abajo' and opc < MAX:            
             opc = opc + 1
-            time.sleep(0.3)
+            time.sleep(0.1)
 
         if key == 'flecha arriba' and opc > 1:
             opc = opc - 1
-            time.sleep(0.3)
+            time.sleep(0.1)
 
         if key == 'enter':            
             if opc != 5 :
-                key = 'a'
                 menu(opc, manejaHelados, manejaSabores)
             else : flag = True
-            time.sleep(0.3)
+            time.sleep(0.1)
