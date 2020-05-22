@@ -47,11 +47,7 @@ class ManejaInscripcion:
     
     def saveFile(self):
         #dni, idTaller, fecha y pago.
-
-        
-
         file = open("inscripciones.csv",'w')
-
 
         # Write data to file
         for i in range(len(self.__arrayInscripcion)):
