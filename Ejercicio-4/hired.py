@@ -1,4 +1,3 @@
-#|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | Max 19 TABs
 #   subclase Contratados
 #   __dni, __name, __address, __phone
 #   __date_start, __date_end, __hours, __salary, hour_price
@@ -11,19 +10,17 @@ class Hired(Employe):
     __date_start = None
     __date_end = None
     __hours = 0
-    __salary = 0
-    hour_price = 300
+    hour_price = 300.0
 
     def __init__(self, dni, name, address, phone, date_start, date_end, hours):
         super().__init__(dni, name, address, phone)
         self.__date_start = datetime.strptime(date_start, '%d/%m/%Y')
         self.__date_end = datetime.strptime(date_end, '%d/%m/%Y')
         self.__hours = int(hours)
-        self.__salary = int(hours) * self.hour_price
 
     def __str__(self):
-        return super().__str__() + '{}║{}║{:>02}║{:<6}║{}║'.format(self.__date_start.date(),
-               self.__date_end.date(), self.__hours, self.__salary, self.hour_price)
+        return super().__str__() + '{}║{}║{:>02}║{}║'.format(self.__date_start.date(),
+               self.__date_end.date(), self.__hours, self.hour_price)
 
 #   instance method
 
@@ -39,7 +36,7 @@ class Hired(Employe):
         return self.__hours
 
     def get_salary(self):
-        return self.__salary
+        return self.__hours * self.hour_price
     
     def set_date_start(self, date_start):
         self.__date_start = date_start
@@ -49,10 +46,6 @@ class Hired(Employe):
 
     def set_hours(self, hours):
         self.__hours = hours
-        self.__set_salary()
-
-    def __set_salary(self):
-        self.__salary = self.__hours * self.hour_price
 
     #   class method
     #   setters & getters

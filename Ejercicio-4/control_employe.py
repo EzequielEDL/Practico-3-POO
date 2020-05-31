@@ -1,4 +1,3 @@
-#|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | Max 19 TABs
 #   class Maneja Empleados
 #   __
 

@@ -1,6 +1,8 @@
-#|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | Max 19 TABs
 #   class Empleado
 #   __dni, __name, __address, __phone
+
+import abc
+from abc import ABC
 
 
 class Employe:
@@ -16,8 +18,8 @@ class Employe:
         self.__phone = phone
 
     def __str__(self):
-        return '║{}║{:<8}║{:<28}║{}║'.format(self.__dni, self.__name, self.__address,
-            self.__phone)
+        return '║{}║{:<8}║{:<28}║{:<7}║{:<8}║'.format(self.__dni, self.__name,
+            self.__address, self.__phone, self.get_salary())
 
 #   instance method
 
@@ -46,3 +48,7 @@ class Employe:
     
     def set_phone(self, phone):
         self.__phone = phone
+
+    @abc.abstractmethod
+    def get_salary():
+        pass

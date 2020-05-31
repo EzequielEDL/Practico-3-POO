@@ -14,10 +14,9 @@ class External(Employe):
     __amount_viatic = 0
     __amount_secure = 0
     __work_price = 0
-    __salary = 0
 
-    def __init__(self, dni, name, address, phone, task, date_start, date_end,
-            amount_viatic, amount_secure, work_price):
+    def __init__(self, dni, name, address, phone, task, date_start,
+            date_end, amount_viatic, amount_secure, work_price):
         super().__init__(dni, name, address, phone)
         self.__task = task
         self.__date_start = datetime.strptime(date_start, '%d/%m/%Y')
@@ -25,12 +24,11 @@ class External(Employe):
         self.__amount_viatic = float(amount_viatic)
         self.__amount_secure = float(amount_secure)
         self.__work_price = float(work_price)
-        self.__salary = self.__work_price - self.__amount_secure - self.__amount_viatic
 
     def __str__(self):
-        return super().__str__() + '{:<12}║{}║{}║{:<6}║{:<6}║{:<7}║{:<7}║'.format(self.__task,
-            self.__date_start.date(), self.__date_end.date(), self.__amount_viatic,
-            self.__amount_secure, self.__work_price, self.__salary)
+        return super().__str__() + '{:<12}║{}║{}║{:<6}║{:<6}║{:<7}║'.format(self.__task,
+            self.__date_start.date(), self.__date_end.date(),
+            self.__amount_viatic, self.__amount_secure, self.__work_price)
 
 #   instance method
 
@@ -55,7 +53,7 @@ class External(Employe):
         return self.__work_price
 
     def get_salary(self):
-        return self.__salary
+        return self.__work_price - self.__amount_secure - self.__amount_viatic
     
     def set_task(self, task):
         self.__task = task
@@ -68,15 +66,9 @@ class External(Employe):
     
     def set_amount_viatic(self, amount_viatic):
         self.__amount_viatic = amount_viatic
-        self.__set_salary()
 
     def set_amount_secure(self, amount_secure):
         self.__amount_secure = amount_secure
-        self.__set_salary()
 
     def set_work_price(self, work_price):
         self.__work_price = work_price
-        self.__set_salary()
-
-    def __set_salary(self):
-        self.__salary = self.__work_price - self.__amount_secure - self.__amount_viatic
