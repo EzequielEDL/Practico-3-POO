@@ -1,25 +1,31 @@
 #	Clase vehiculos nuevos
 #	__model, __doors, __color, __price_base, brand, __version
 
+import abc
+
+
 class Vehicle:
 	__model = ''
 	__doors = ''
 	__color = ''
 	__price_base = 0.0
-	__brand = ''
 
-	def __init__(self, model, doors, color, price_base, brand):
+	def __init__(self, model, doors, color, price_base):
 		self.__model = model
 		self.__doors = doors
 		self.__color = color
-		self.__price_base = price_base
-		self.__brand = brand
+		self.__price_base = float(price_base)
 
 	def __str__(self):
-		return '║{:<9}║{:<2}║{:<9}║{:<10}║{:<11}║'.format(self.__model, self.__doors,
-			self.__color, self.__price_base, self.__brand)
+		return ' ■ {:<8} ■ {} ■ {:<8} ■ {:<9} ■ {:<9} '.format(
+			self.__model, self.__doors, self.__color, self.__price_base, 
+			self.get_price())
 
-#	Instance class
+#	Instance methods
+	
+	def get_price(self):
+		percentage = self.__price_base * self._get_percentage()
+		return self.__price_base - percentage
 
 	def get_model(self):
 		return self.__model
@@ -33,9 +39,6 @@ class Vehicle:
 	def get_price_base(self):
 		return self.__price_base
 
-	def get_brand(self):
-		return self.__brand
-
 	def set_model(self, model):
 		self.__model = model
 
@@ -48,5 +51,7 @@ class Vehicle:
 	def set_price_base(self, price_base):
 		self.__price_base = price_base
 
-	def set_brand(self, brand):
-		self.__brand = brand
+#	Abstract methods
+	@abc.abstractmethod	
+	def _get_percentage(self):
+		pass

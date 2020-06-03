@@ -1,0 +1,527 @@
+{
+    "__class__": "ControlVehicle",
+    "data": [
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "prisma",
+                "doors": "4",
+                "color": "negro",
+                "price_base": 917900.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "agile",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 720300.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "510",
+                "doors": "4",
+                "color": "azul",
+                "price_base": 450200.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "corsa",
+                "doors": "2",
+                "color": "blanco",
+                "price_base": 800500.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "vectra",
+                "doors": "4",
+                "color": "negro",
+                "price_base": 360000.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "cruce",
+                "doors": "4",
+                "color": "amarillo",
+                "price_base": 500000.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "apache",
+                "doors": "2",
+                "color": "gris",
+                "price_base": 470100.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "astra",
+                "doors": "2",
+                "color": "blanco",
+                "price_base": 321000.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "camaro",
+                "doors": "2",
+                "color": "rojo",
+                "price_base": 1235000.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "prisma",
+                "doors": "4",
+                "color": "negro",
+                "price_base": 1117900.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "agile",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 720300.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "510",
+                "doors": "4",
+                "color": "azul",
+                "price_base": 350200.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "corsa",
+                "doors": "2",
+                "color": "blanco",
+                "price_base": 600500.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "vectra",
+                "doors": "4",
+                "color": "negro",
+                "price_base": 560000.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "cruce",
+                "doors": "4",
+                "color": "amarillo",
+                "price_base": 500000.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "apache",
+                "doors": "2",
+                "color": "gris",
+                "price_base": 470100.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "astra",
+                "doors": "2",
+                "color": "blanco",
+                "price_base": 321000.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "camaro",
+                "doors": "2",
+                "color": "rojo",
+                "price_base": 1705000.0,
+                "version": "full"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "510",
+                "doors": "4",
+                "color": "azul",
+                "price_base": 350200.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "corsa",
+                "doors": "2",
+                "color": "blanco",
+                "price_base": 600500.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleNew",
+            "__attributes__": {
+                "model": "cruce",
+                "doors": "4",
+                "color": "amarillo",
+                "price_base": 500000.0,
+                "version": "base"
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "308",
+                "doors": "4",
+                "color": "blanco",
+                "price_base": 210500.0,
+                "brand": "peugeot",
+                "patent": "VNZ201",
+                "year": 2004,
+                "kilomoters": 240000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "307",
+                "doors": "4",
+                "color": "negro",
+                "price_base": 120300.0,
+                "brand": "peugeot",
+                "patent": "GHJ203",
+                "year": 1992,
+                "kilomoters": 420000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "206",
+                "doors": "2",
+                "color": "gris",
+                "price_base": 340000.0,
+                "brand": "peugeot",
+                "patent": "GDF507",
+                "year": 1999,
+                "kilomoters": 315000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "205",
+                "doors": "4",
+                "color": "rojo",
+                "price_base": 210000.0,
+                "brand": "peugeot",
+                "patent": "KWE284",
+                "year": 2007,
+                "kilomoters": 195000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "gol",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 143000.0,
+                "brand": "volkswagen",
+                "patent": "PWQ655",
+                "year": 1994,
+                "kilomoters": 390000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "amaro",
+                "doors": "4",
+                "color": "blanco",
+                "price_base": 160000.0,
+                "brand": "volkswagen",
+                "patent": "IRE192",
+                "year": 2001,
+                "kilomoters": 285000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "polo",
+                "doors": "2",
+                "color": "negro",
+                "price_base": 320000.0,
+                "brand": "volkswagen",
+                "patent": "IUN784",
+                "year": 1990,
+                "kilomoters": 450000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "fox",
+                "doors": "2",
+                "color": "negro",
+                "price_base": 95000.0,
+                "brand": "volkswagen",
+                "patent": "LAS123",
+                "year": 2008,
+                "kilomoters": 180000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "torino",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 120300.0,
+                "brand": "renault",
+                "patent": "POQ965",
+                "year": 2005,
+                "kilomoters": 225000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "r12",
+                "doors": "2",
+                "color": "rojo",
+                "price_base": 93000.0,
+                "brand": "renault",
+                "patent": "NIX438",
+                "year": 2003,
+                "kilomoters": 255000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "fluencer",
+                "doors": "2",
+                "color": "gris",
+                "price_base": 320000.0,
+                "brand": "renault",
+                "patent": "ZER672",
+                "year": 2007,
+                "kilomoters": 195000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "kangoo",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 95000.0,
+                "brand": "renault",
+                "patent": "POR451",
+                "year": 2002,
+                "kilomoters": 270000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "escort",
+                "doors": "4",
+                "color": "blanco",
+                "price_base": 84000.0,
+                "brand": "ford",
+                "patent": "NLQ897",
+                "year": 1991,
+                "kilomoters": 435000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "fiesta",
+                "doors": "4",
+                "color": "rojo",
+                "price_base": 120300.0,
+                "brand": "ford",
+                "patent": "UEW265",
+                "year": 1993,
+                "kilomoters": 405000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "mustang",
+                "doors": "4",
+                "color": "rojo",
+                "price_base": 93000.0,
+                "brand": "ford",
+                "patent": "CXZ54",
+                "year": 2006,
+                "kilomoters": 210000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "focus",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 120300.0,
+                "brand": "ford",
+                "patent": "MBV365",
+                "year": 1998,
+                "kilomoters": 330000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "siena",
+                "doors": "2",
+                "color": "gris",
+                "price_base": 340000.0,
+                "brand": "fiat",
+                "patent": "ASD883",
+                "year": 2009,
+                "kilomoters": 165000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "punto",
+                "doors": "2",
+                "color": "blanco",
+                "price_base": 210000.0,
+                "brand": "fiat",
+                "patent": "LFQ652",
+                "year": 2003,
+                "kilomoters": 255000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "duna",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 143000.0,
+                "brand": "fiat",
+                "patent": "AZM591",
+                "year": 1990,
+                "kilomoters": 450000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "toro",
+                "doors": "4",
+                "color": "negro",
+                "price_base": 84000.0,
+                "brand": "fiat",
+                "patent": "MZA59",
+                "year": 2003,
+                "kilomoters": 255000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "x",
+                "doors": "4",
+                "color": "blanco",
+                "price_base": 320000.0,
+                "brand": "tesla",
+                "patent": "OEW3",
+                "year": 2015,
+                "kilomoters": 75000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "y",
+                "doors": "4",
+                "color": "gris",
+                "price_base": 120300.0,
+                "brand": "tesla",
+                "patent": "APQ861",
+                "year": 2013,
+                "kilomoters": 105000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "s",
+                "doors": "2",
+                "color": "negro",
+                "price_base": 340000.0,
+                "brand": "tesla",
+                "patent": "LKF975",
+                "year": 2016,
+                "kilomoters": 60000
+            }
+        },
+        {
+            "__class__": "VehicleOld",
+            "__attributes__": {
+                "model": "roadster",
+                "doors": "2",
+                "color": "rojo",
+                "price_base": 160000.0,
+                "brand": "tesla",
+                "patent": "ABC761",
+                "year": 2018,
+                "kilomoters": 30000
+            }
+        }
+    ]
+}
