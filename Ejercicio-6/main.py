@@ -60,6 +60,7 @@ def option4(control):
     patent = input('\n \244 Patente: ')
     price_base = float(input('\n \244 Nuevo precio base: '))
     vehicle = control.search_vehicle(patent)
+    vehicle.set_price_base(price_base)
     print('\n * Nuevo precio del vehiculo: {}'.format(vehicle.get_price()))
 
     input('\n\n<< press any key to continue >>')

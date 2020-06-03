@@ -1,31 +1,9 @@
 #	Lista implementada
 
 from interface import IElement
+from node import Node
 import zope
 
-
-class Node:
-	__element = None
-	__next = None
-
-	def __init__(self, element):
-		self.__element = element
-		self.__next = None
-
-	def __str__(self):
-		return '{}'.format(self.__element)
-
-	def _get_element(self):
-		return self.__element
-
-	def _get_next(self):
-		return self.__next
-
-	def _set_next(self, next):
-		self.__next = next
-
-	def _set_element(self, element):
-		self.__element = element
 
 @zope.interface.implementer(IElement)
 class OwnList(Node):
@@ -60,8 +38,8 @@ class OwnList(Node):
 		
 		else:
 			self.__index += 1
-			obj = self.__current._get_element()
-			self.__current = self.__current._get_next()
+			obj = self.__current.get_element()
+			self.__current = self.__current.get_next()
 			return obj
 
 #	Instance methods
@@ -81,14 +59,14 @@ class OwnList(Node):
 
 			while aux != None:
 				before_node = aux
-				aux = aux._get_next()
+				aux = aux.get_next()
 
-			before_node._set_next(new_node)
+			before_node.set_next(new_node)
 
 #	Agregar elemento al principio
 	def add_beg(self, element):
 		new_node = Node(element)
-		new_node._set_next(self.__head)
+		new_node.set_next(self.__head)
 		self.__head = new_node
 		self.__current = new_node
 		self.__top += 1
@@ -102,12 +80,12 @@ class OwnList(Node):
 
 			while i < index and aux != None:
 				before_node = aux
-				aux = aux._get_next()
+				aux = aux.get_next()
 				i += 1
 
-			aux_before = before_node._get_next()
-			before_node._set_next(new_node) 
-			new_node._set_next(aux_before)
+			aux_before = before_node.get_next()
+			before_node.set_next(new_node) 
+			new_node.set_next(aux_before)
 			self.__top += 1
 
 		elif index == 0:
@@ -123,9 +101,9 @@ class OwnList(Node):
 		aux = self.__head
 
 		while i != self.__top and index != i:
-			aux = aux._get_next()
+			aux = aux.get_next()
 			i += 1
 
 		if i != self.__top:
-			return aux._get_element()
+			return aux.get_element()
 		else: print('index out of range')
