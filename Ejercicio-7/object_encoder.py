@@ -1,4 +1,10 @@
 import json
+from teacher_investigator import TeacherInvestigator
+from control_personal import ControlPersonal
+from investigator import Investigator
+from teacher import Teacher
+from support import Support
+
 
 class ObjectEncoder(object):
 	def save(self, dictionary, file):
@@ -12,14 +18,14 @@ class ObjectEncoder(object):
 			origin.close()
 			return dictionary
 
-	def Decoder(self, d):
+	def decoder(self, d):
 		if '__class__' not in d:
 			return d
 		else :
 			class_name = d['__class__']
 			class_ = eval(class_name)
 
-			if class_name == 'ControlVehicle':
+			if class_name == 'ControlPersonal':
 				elements = d['data']
 				list_file = class_()
 
@@ -28,7 +34,7 @@ class ObjectEncoder(object):
 					class_name = d_element.pop('__class__')
 					class_ = eval(class_name)
 					attributes = d_element['__attributes__']
-					a_vehicle = class_(**attributes)
-					list_file.get_list_vehicle().add_end(a_vehicle)
+					a_personal = class_(**attributes)
+					list_file.get_list_personal().add_end(a_personal)
 
 				return list_file

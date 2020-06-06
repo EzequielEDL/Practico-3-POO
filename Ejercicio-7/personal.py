@@ -7,7 +7,9 @@ class Personal:
 	__salary_basic = 0.0
 	__antiquity = 0
 
-	def __init__(self, cuil, lastname, name, salary_basic, antiquity):
+	def __init__(self, cuil, lastname, name, salary_basic, antiquity,
+			career = '', position = '', professorship = '',
+			area_inv = '', type_inv = ''):
 		self.__cuil =  str(cuil)
 		self.__lastname = str(lastname)
 		self.__name = str(name)
@@ -15,7 +17,7 @@ class Personal:
 		self.__antiquity = int(antiquity)
 
 	def __str__(self):
-		return ' ■ {:<11} ■ {} ■ {} ■ {} ■ {}'.format(
+		return ' ■ {:<13} ■ {:<10} ■ {:<9} ■ {} ■ {:<2}'.format(
 			self.__cuil, self.__lastname, self.__name,
 			self.__salary_basic, self.__antiquity)
 

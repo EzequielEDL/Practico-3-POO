@@ -9,14 +9,15 @@ class Teacher(Personal):
 	__professorship = ''
 
 	def __init__(self, cuil, lastname, name, salary_basic, antiquity,
-			career, position, professorship):
-		super().__init__(cuil, lastname, name, salary_basic, antiquity)
+			career, position, professorship, area_inv = '', type_inv = ''):
+		super().__init__(cuil, lastname, name, salary_basic, antiquity,
+			career, position, professorship, area_inv, type_inv)
 		self.__career = str(career)
 		self.__position = str(position)
 		self.__professorship = str(professorship)
 
 	def __str__(self):
-		return super().__str__() + ' ■ {} ■ {} ■ {}'.format(
+		return super().__str__() + ' ■ {:<10} ■ {:<17} ■ {}'.format(
 			self.__career, self.__position, self.__professorship)
 
 #	Convert to JSON

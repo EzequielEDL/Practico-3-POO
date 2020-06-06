@@ -1,0 +1,429 @@
+{
+    "__class__": "ControlPersonal",
+    "data": [
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "26-44989288-3",
+                "lastname": "Blaise",
+                "name": "Franklin",
+                "salary_basic": 24100.0,
+                "antiquity": 18,
+                "career": "LSI",
+                "position": "Profesor Ayudante",
+                "professorship": "Matematica Basica"
+            }
+        },
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "26-44989288-3",
+                "lastname": "Abraham",
+                "name": "Hawking",
+                "salary_basic": 23300.0,
+                "antiquity": 17,
+                "career": "LCC",
+                "position": "Profesor Adjunto",
+                "professorship": "Aspectos Profesionales"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "20-44413932-3",
+                "lastname": "Marie",
+                "name": "Nobel",
+                "salary_basic": 24000.0,
+                "antiquity": 20,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "RV",
+                "type_inv": "Exp. Social"
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Blaise",
+                "name": "Volta",
+                "salary_basic": 33200.0,
+                "antiquity": 5,
+                "category": "Funciones en la biblioteca"
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Arquimedes",
+                "name": "Wilkinson",
+                "salary_basic": 33100.0,
+                "antiquity": 14,
+                "category": "Area movilidad"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Galileo",
+                "name": "Darby",
+                "salary_basic": 22000.0,
+                "antiquity": 20,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "Astronomia",
+                "type_inv": "Est. Exoplanetas"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "20-44413932-3",
+                "lastname": "Isaac",
+                "name": "Tull",
+                "salary_basic": 20300.0,
+                "antiquity": 13,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "Astronomia",
+                "type_inv": "Est. Exoplanetas"
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "26-44989288-3",
+                "lastname": "Leonardo",
+                "name": "Newton",
+                "salary_basic": 31000.0,
+                "antiquity": 6,
+                "career": "Geologia",
+                "position": "Profesor Ayudante",
+                "professorship": "Sistemas de Informacion",
+                "area_inv": "Geologia",
+                "type_inv": "Paleontolog\u00eda",
+                "category_inv": "Categoria 3",
+                "salary_extra": 3210.0
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "20-44413932-3",
+                "lastname": "Edward",
+                "name": "Benz",
+                "salary_basic": 20100.0,
+                "antiquity": 3,
+                "category": "Director general economico"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "23-43218074-3",
+                "lastname": "Stephen",
+                "name": "Turing",
+                "salary_basic": 35300.0,
+                "antiquity": 2,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "Geologia",
+                "type_inv": "Paleontolog\u00eda"
+            }
+        },
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "20-44413932-3",
+                "lastname": "James",
+                "name": "Benz",
+                "salary_basic": 22000.0,
+                "antiquity": 1,
+                "career": "LCC",
+                "position": "Profesor Asociado",
+                "professorship": "Analisis Matematico I"
+            }
+        },
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "27-44381998-3",
+                "lastname": "Albert",
+                "name": "Michelin",
+                "salary_basic": 35300.0,
+                "antiquity": 1,
+                "career": "Geologia",
+                "position": "Profesor Titular",
+                "professorship": "Sistemas Digitales"
+            }
+        },
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "26-44989288-3",
+                "lastname": "John",
+                "name": "Hawking",
+                "salary_basic": 32000.0,
+                "antiquity": 13,
+                "career": "Biologia",
+                "position": "Profesor Titular",
+                "professorship": "Sistemas Digitales"
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Alessandro",
+                "name": "Einsten",
+                "salary_basic": 22300.0,
+                "antiquity": 14,
+                "career": "Biologia",
+                "position": "Profesor Asociado",
+                "professorship": "Sistemas Digitales",
+                "area_inv": "RV",
+                "type_inv": "Exp. Social",
+                "category_inv": "Categoria 5",
+                "salary_extra": 3600.0
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "25-41407025-3",
+                "lastname": "Marie",
+                "name": "Siracusa",
+                "salary_basic": 32300.0,
+                "antiquity": 15,
+                "career": "Biologia",
+                "position": "Profesor Asociado",
+                "professorship": "Sistemas de Informacion",
+                "area_inv": "Medicina",
+                "type_inv": "Vacuna COVID-19",
+                "category_inv": "Categoria 1",
+                "salary_extra": 2010.0
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "25-41407025-3",
+                "lastname": "Abraham",
+                "name": "Einsten",
+                "salary_basic": 30100.0,
+                "antiquity": 19,
+                "category": "Director general economico"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Georg",
+                "name": "DaVinci",
+                "salary_basic": 24100.0,
+                "antiquity": 15,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "RV",
+                "type_inv": "Exp. Social"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Karl",
+                "name": "Siracusa",
+                "salary_basic": 22300.0,
+                "antiquity": 5,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "Geologia",
+                "type_inv": "Paleontolog\u00eda"
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "27-44381998-3",
+                "lastname": "James",
+                "name": "Galilei",
+                "salary_basic": 32100.0,
+                "antiquity": 18,
+                "career": "Geofisica",
+                "position": "Profesor Ayudante",
+                "professorship": "Analisis Matematico I",
+                "area_inv": "RV",
+                "type_inv": "Exp. Social",
+                "category_inv": "Categoria 5",
+                "salary_extra": 4130.0
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "20-44413932-3",
+                "lastname": "Marie",
+                "name": "Faraday",
+                "salary_basic": 21300.0,
+                "antiquity": 18,
+                "career": "LCC",
+                "position": "Profesor Asociado",
+                "professorship": "Aspectos Profesionales",
+                "area_inv": "Astronomia",
+                "type_inv": "Est. Exoplanetas",
+                "category_inv": "Categoria 4",
+                "salary_extra": 2420.0
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Isaac",
+                "name": "Nobel",
+                "salary_basic": 33300.0,
+                "antiquity": 20,
+                "category": "Funciones en la biblioteca"
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "27-44381998-3",
+                "lastname": "Isaac",
+                "name": "Ohm",
+                "salary_basic": 23200.0,
+                "antiquity": 2,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "Astronomia",
+                "type_inv": "Est. Exoplanetas"
+            }
+        },
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Thomas",
+                "name": "Turing",
+                "salary_basic": 24200.0,
+                "antiquity": 11,
+                "career": "LSI",
+                "position": "Profesor Adjunto",
+                "professorship": "Analisis Matematico I"
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "20-44413932-3",
+                "lastname": "William",
+                "name": "Watt",
+                "salary_basic": 25000.0,
+                "antiquity": 9,
+                "category": "Secretaria de bienestar"
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "26-44989288-3",
+                "lastname": "Michael",
+                "name": "Siracusa",
+                "salary_basic": 24200.0,
+                "antiquity": 17,
+                "career": "Biologia",
+                "position": "Profesor Adjunto",
+                "professorship": "Sistemas de Informacion",
+                "area_inv": "IA",
+                "type_inv": "Aplicaciones DLSS",
+                "category_inv": "Categoria 2",
+                "salary_extra": 2600.0
+            }
+        },
+        {
+            "__class__": "Investigator",
+            "__attributes__": {
+                "cuil": "25-41407025-3",
+                "lastname": "James",
+                "name": "Darby",
+                "salary_basic": 31200.0,
+                "antiquity": 4,
+                "career": "",
+                "position": "",
+                "professorship": "",
+                "area_inv": "IA",
+                "type_inv": "Aplicaciones DLSS"
+            }
+        },
+        {
+            "__class__": "Teacher",
+            "__attributes__": {
+                "cuil": "26-44989288-3",
+                "lastname": "Abraham",
+                "name": "Franklin",
+                "salary_basic": 22300.0,
+                "antiquity": 16,
+                "career": "LCC",
+                "position": "Profesor Asociado",
+                "professorship": "Analisis Matematico I"
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "25-41407025-3",
+                "lastname": "Arquimedes",
+                "name": "Maxwell",
+                "salary_basic": 35300.0,
+                "antiquity": 4,
+                "career": "Biologia",
+                "position": "Profesor Asociado",
+                "professorship": "Ingles I",
+                "area_inv": "Astronomia",
+                "type_inv": "Est. Exoplanetas",
+                "category_inv": "Categoria 4",
+                "salary_extra": 2220.0
+            }
+        },
+        {
+            "__class__": "Support",
+            "__attributes__": {
+                "cuil": "27-44381998-3",
+                "lastname": "Albert",
+                "name": "Curie",
+                "salary_basic": 32300.0,
+                "antiquity": 2,
+                "category": "Direccion administriva"
+            }
+        },
+        {
+            "__class__": "TeacherInvestigator",
+            "__attributes__": {
+                "cuil": "24-42262048-3",
+                "lastname": "Jethro",
+                "name": "Edison",
+                "salary_basic": 34100.0,
+                "antiquity": 16,
+                "career": "Geologia",
+                "position": "Profesor Asociado",
+                "professorship": "Sistemas de Informacion",
+                "area_inv": "RV",
+                "type_inv": "Exp. Social",
+                "category_inv": "Categoria 5",
+                "salary_extra": 3320.0
+            }
+        }
+    ]
+}

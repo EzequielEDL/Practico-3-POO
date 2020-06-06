@@ -12,7 +12,7 @@ class Support(Personal):
 		self.__category = str(category)
 		
 	def __str__(self):
-		return super().__str__() + ' ■ {}'.format(self.__category)
+		return super().__str__() + ' ■ {:<30} ■'.format(self.__category)
 
 #	Convert to JSON
 	def toJSON(self):
