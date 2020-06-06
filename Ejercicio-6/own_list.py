@@ -6,7 +6,7 @@ import zope
 
 
 @zope.interface.implementer(IElement)
-class OwnList(Node):
+class OwnList():
 	__head = None
 	__current = None
 	__index = 0
