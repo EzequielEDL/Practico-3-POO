@@ -1,15 +1,15 @@
 #	Clase de Personal
+import abc
 
-class Personal:
+
+class Personal(abc.ABC):
 	__cuil = ''
 	__lastname = ''
 	__name = ''
 	__salary_basic = 0.0
 	__antiquity = 0
 
-	def __init__(self, cuil, lastname, name, salary_basic, antiquity,
-			career = '', position = '', professorship = '',
-			area_inv = '', type_inv = ''):
+	def __init__(self, cuil, lastname, name, salary_basic, antiquity):
 		self.__cuil =  str(cuil)
 		self.__lastname = str(lastname)
 		self.__name = str(name)
@@ -52,3 +52,20 @@ class Personal:
 
 	def set_antiquity(self, antiquity):
 		self.__antiquity = antiquity
+
+	def toJSON(self):
+		return dict(
+			__attributes__ = dict(
+							cuil = self.__cuil,
+							lastname = self.__lastname,
+							name = self.__name,
+							salary_basic = self.__salary_basic,
+							antiquity = self.__antiquity,
+							)
+						)
+
+#	Abstract methods
+
+	@abc.abstractmethod	
+	def get_salary(self):
+		pass

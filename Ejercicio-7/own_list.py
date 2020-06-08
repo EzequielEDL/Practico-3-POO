@@ -42,6 +42,38 @@ class OwnList():
 			self.__current = self.__current.get_next()
 			return obj
 
+	def __getitem__(self, xi):
+		if xi >= 0 and xi < len(self):
+			aux = self.__head
+			i = 0
+
+			if i == xi:
+				return aux.get_element()
+			
+			else:
+				while aux != None and i != xi:
+					i += 1
+					before_node = aux
+					aux = aux.get_next()
+
+				return aux.get_element()
+
+	def __setitem__(self, xi, value):
+		if xi >= 0 and xi < len(self):
+			aux = self.__head
+			i = 0
+
+			if i == xi:
+				return aux.set_element(value)
+			
+			else:
+				while aux != None and i != xi:
+					i += 1
+					before_node = aux
+					aux = aux.get_next()
+
+				return aux.set_element(value)
+
 #	Instance methods
 
 #	Agregar elemento al final
@@ -94,16 +126,3 @@ class OwnList():
 		elif index == self.__top:
 			self.add_end(element)
 
-
-#	Obtener elemento de una posicion
-	def get(self, index):
-		i = 0
-		aux = self.__head
-
-		while i != self.__top and index != i:
-			aux = aux.get_next()
-			i += 1
-
-		if i != self.__top:
-			return aux.get_element()
-		else: print('index out of range')

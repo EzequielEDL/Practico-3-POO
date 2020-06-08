@@ -15,7 +15,3 @@ class IElement(Interface):
 
     def add_beg(element):
         pass
-
-#   Mostrar Elemento
-    def get(index):
-        pass

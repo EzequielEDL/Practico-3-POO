@@ -8,25 +8,22 @@ class Support(Personal):
 
 	def __init__(self, cuil, lastname, name, salary_basic, antiquity,
 			category):
+		self.__category = int(category)
 		super().__init__(cuil, lastname, name, salary_basic, antiquity)
-		self.__category = str(category)
 		
 	def __str__(self):
 		return super().__str__() + ' ■ {:<30} ■'.format(self.__category)
 
 #	Convert to JSON
 	def toJSON(self):
-		return dict(
+		d = dict(
 			__class__ = self.__class__.__name__,
 			__attributes__ = dict(
-							cuil = self.get_cuil(),
-							lastname = self.get_lastname(),
-							name = self.get_name(),
-							salary_basic = self.get_salary_basic(),
-							antiquity = self.get_antiquity(),
 							category = self.__category
 							)
 						)
+		d.get('__attributes__').update(super().toJSON().get('__attributes__'))
+		return d
 
 #	Instance methods
 
@@ -35,3 +32,18 @@ class Support(Personal):
 
 	def set_category(self, category):
 		self.__category = category
+
+	def get_salary(self):
+		salary = self.get_salary_basic()
+		
+		if self.__category <= 10:
+			salary *= 0.1
+
+		elif self.__category <= 20:
+			salary *= 0.2
+
+		else:
+			salary *= 0.3
+
+		salary += self.get_salary_basic() * (self.get_antiquity() * 0.1)
+		return salary

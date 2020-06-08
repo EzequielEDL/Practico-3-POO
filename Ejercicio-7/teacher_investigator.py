@@ -8,18 +8,10 @@ class TeacherInvestigator(Teacher, Investigator):
 	__category_inv = ''
 	__salary_extra = 0.0
 
-	def __init__(self, cuil, lastname, name, salary_basic, antiquity,
-			career, position, professorship, area_inv, type_inv,
-			category_inv, salary_extra):
-		super().__init__(cuil, lastname, name, salary_basic, antiquity,
-			career, position, professorship, area_inv, type_inv)
-		self.__category_inv = str(category_inv)
-		self.__salary_extra = float(salary_extra)
-
-		#print('|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|'.format(
-		#	cuil, lastname, name, salary_basic, antiquity,
-		#	career, position, professorship, area_inv,
-		#	type_inv, self.__category_inv, self.__salary_extra))
+	def __init__(self, **kw_args):
+		self.__category_inv = str(kw_args.pop('category_inv').upper())
+		self.__salary_extra = float(kw_args.pop('salary_extra'))
+		super().__init__(**kw_args)
 
 	def __str__(self):
 		str_q = ' ■ {:<11} ■ {:<10} ■ {:<9} ■ {} ■ {:<2}'.format(
@@ -42,23 +34,15 @@ class TeacherInvestigator(Teacher, Investigator):
 
 #	Convert to JSON
 	def toJSON(self):
-		return dict(
+		d = dict(
 			__class__ = self.__class__.__name__,
 			__attributes__ = dict(
-							cuil = self.get_cuil(),
-							lastname = self.get_lastname(),
-							name = self.get_name(),
-							salary_basic = self.get_salary_basic(),
-							antiquity = self.get_antiquity(),
-							career = self.get_career(),
-							position = self.get_position(),
-							professorship = self.get_professorship(),
-							area_inv = self.get_area_inv(),
-							type_inv = self.get_type_inv(),
 							category_inv = self.__category_inv,
 							salary_extra = self.__salary_extra
 							)
 						)
+		d.get('__attributes__').update(super().toJSON().get('__attributes__'))
+		return d
 
 #	Instance methods
 
@@ -73,3 +57,9 @@ class TeacherInvestigator(Teacher, Investigator):
 
 	def set_salary_extra(self, salary_extra):
 		self.__salary_extra = salary_extra
+
+	def get_salary_basic(self):
+		return super().get_salary_basic() + self.__salary_extra
+
+	def get_salary(self):
+		return Teacher.get_salary(self) + self.__salary_extra

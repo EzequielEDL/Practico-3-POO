@@ -8,13 +8,11 @@ class Teacher(Personal):
 	__position = ''
 	__professorship = ''
 
-	def __init__(self, cuil, lastname, name, salary_basic, antiquity,
-			career, position, professorship, area_inv = '', type_inv = ''):
-		super().__init__(cuil, lastname, name, salary_basic, antiquity,
-			career, position, professorship, area_inv, type_inv)
-		self.__career = str(career)
-		self.__position = str(position)
-		self.__professorship = str(professorship)
+	def __init__(self, **kw_args):
+		self.__career = str(kw_args.pop('career'))
+		self.__position = str(kw_args.pop('position'))
+		self.__professorship = str(kw_args.pop('professorship'))
+		super().__init__(**kw_args)
 
 	def __str__(self):
 		return super().__str__() + ' ■ {:<10} ■ {:<17} ■ {}'.format(
@@ -22,19 +20,16 @@ class Teacher(Personal):
 
 #	Convert to JSON
 	def toJSON(self):
-		return dict(
+		d = dict(
 			__class__ = self.__class__.__name__,
 			__attributes__ = dict(
-							cuil = self.get_cuil(),
-							lastname = self.get_lastname(),
-							name = self.get_name(),
-							salary_basic = self.get_salary_basic(),
-							antiquity = self.get_antiquity(),
 							career = self.__career,
 							position = self.__position,
 							professorship = self.__professorship
 							)
 						)
+		d.get('__attributes__').update(super().toJSON().get('__attributes__'))
+		return d
 
 #	Instance methods
 
@@ -55,3 +50,18 @@ class Teacher(Personal):
 
 	def set_professorship(self, professorship):
 		self.__professorship = professorship
+
+	def get_salary(self):
+		salary = self.get_salary_basic()
+
+		if self.__position.lower() == 'simple': 
+			salary += salary * 0.1
+
+		elif self.__position.lower() == 'semiexclusivo':
+			salary += salary * 0.2
+
+		else:
+			salary += salary * 0.5
+
+		salary += self.get_salary_basic() * (0.1 * self.get_antiquity())
+		return salary
