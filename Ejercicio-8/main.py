@@ -42,52 +42,52 @@ def option4(control_employe):
 
     input('\n\n<< press any key to continue >>')
 
-def option5(control_employe):
+def login():
+    user = input('\tUsuario: ')
+    password = input('\tClave: ')
 #   Usuario/contraseña para Tesorero: uTesoreso/ag@74ck
-    user = input('\tUsuario: ')
-    password = input('\tClave: ')
-
     if user == 'uTesoreso' and password == 'ag@74ck':
-        print('\n\tGasto de sueldo: ')
-        dni = input('\t    Ingresar DNI del empleado: ')
-        ITreasurer(control_employe)
-        control_employe.show_salary(dni)
-
-    else:
-        print('\n\n * usuario/clave incorrecto')
-
-    input('\n\n<< press any key to continue >>')
-
-def option6(control_employe):
+        return 'Treasurer'
 #   Usuario/contraseña para Gerente: uGerente/ufC77#!1
-    user = input('\tUsuario: ')
-    password = input('\tClave: ')
-
-    if user == 'uGerente' and password == 'ufC77#!1':
-        print('\n\tModificar sueldos ')
-        select = input('\tTipo  - externo/planta/contratado: ')
-        IManager(control_employe)
-
-        if select == 'externo':
-            dni = input('\t    Ingresar DNI del empleado: ')
-            amount_viatic = input('\t    Ingresar monto viatico: ')    
-            control_employe.mod_amount_viatic(dni, amount_viatic)
-
-        elif select == 'planta':
-            dni = input('\t    Ingresar DNI del empleado: ')
-            salary_basic = input('\t    Ingresar salario basico: ')
-            control_employe.mod_salary_basic(dni, salary_basic)
-
-        elif select == 'contratado':
-            hour_price = input('\t    Ingresar DNI del empleado: ')
-            control_employe.mod_hour_price(hour_price)
-
+    elif user == 'uGerente' and password == 'ufC77#!1':
+        return 'Manager'
     else:
         print('\n\n * usuario/clave incorrecto')
 
+def Treasurer(control_employe):
+    print('\n\tGasto de sueldo: ')
+    dni = input('\t    Ingresar DNI del empleado: ')
+    control_employe.show_salary(dni)
+
+def Manager(control_employe):
+    print('\n\tModificar sueldos ')
+    select = input('\tTipo  - externo/planta/contratado: ')
+
+    if select == 'externo':
+        dni = input('\t    Ingresar DNI del empleado: ')
+        amount_viatic = input('\t    Ingresar monto viatico: ')    
+        control_employe.mod_amount_viatic(dni, amount_viatic)
+
+    elif select == 'planta':
+        dni = input('\t    Ingresar DNI del empleado: ')
+        basic_salary = input('\t    Ingresar salario basico: ')
+        control_employe.mod_basic_salary(dni, basic_salary)
+
+    elif select == 'contratado':
+        hour_price = input('\t    Ingresar DNI del empleado: ')
+        control_employe.mod_hour_price(hour_price)
+
+def option5(control_employe):
+    user = login()
+
+    if user == 'Treasurer':
+        Treasurer(ITreasurer(control_employe))
+    elif user == 'Manager':
+        Manager(IManager(control_employe))
+
     input('\n\n<< press any key to continue >>')
 
-select = {1: option1, 2: option2, 3: option3, 4: option4, 5: option5, 6: option6}
+select = {1: option1, 2: option2, 3: option3, 4: option4, 5: option5}
 
 def menu(opc, control_employe):
     input()
@@ -101,7 +101,7 @@ def set_color(opc_active, opc_select):
 
 def main():
     #Menu Configuration
-    opc, MAX = 1, 7
+    opc, MAX = 1, 6
     flag = False
 
     while not flag:
@@ -112,9 +112,8 @@ def main():
         print(set_color(opc, 2) + '  Total de tarea')
         print(set_color(opc, 3) + '  Ayuda')
         print(set_color(opc, 4) + '  Calcular sueldo')
-        print(set_color(opc, 5) + '  Tesorero')
-        print(set_color(opc, 6) + '  Gerente')
-        print(set_color(opc, 7) + '  Salir')
+        print(set_color(opc, 5) + '  Tesorero/Gerente')
+        print(set_color(opc, 6) + '  Salir')
 
         key = keyboard.read_key()
         print('\n  ' + key)
